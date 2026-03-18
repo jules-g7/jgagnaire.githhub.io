@@ -70,6 +70,7 @@
       border-radius: 3px;
       transition: color 0.15s, background 0.15s;
       white-space: nowrap;
+      font-weight: 300;
     }
     nav ul a:hover { color: var(--black); background: #f0f0ee; }
     nav ul a.active { color: var(--black); font-weight: 500; }
@@ -209,6 +210,43 @@
       margin-bottom: 0.5rem;
     }
 
+    /* ── TABLE ── */
+    .teach-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1.5rem;
+    }
+    .teach-table th {
+      text-align: left;
+      padding: 0.5rem 2rem 0.8rem 0;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--gray-light);
+      border-bottom: 1px solid var(--border);
+      font-weight: 400;
+    }
+    .teach-table td {
+      padding: 1.1rem 2rem 1.1rem 0;
+      border-bottom: 1px solid #f0f0ee;
+      font-size: 0.88rem;
+      color: var(--gray-dark);
+    }
+    .teach-table td:first-child { color: var(--black); }
+    .teach-table tr:last-child td { border-bottom: none; }
+    .teach-table .mono {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--gray);
+    }
+    .teach-table a {
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.78rem;
+    }
+    .teach-table a:hover { text-decoration: underline; }
+
     /* ── TALKS ── */
     .talk {
       display: grid;
@@ -299,7 +337,7 @@
   <a href="#accueil" class="nav-name">Jules Gagnaire</a>
   <nav>
     <ul>
-      <li><a href="#accueil" class="active">Présentation</a></li>
+      <li><a href="#accueil">Présentation</a></li>
       <li><a href="#cv">CV</a></li>
       <li><a href="#recherche">Recherche</a></li>
       <li><a href="#enseignement">Enseignement</a></li>
@@ -321,8 +359,7 @@
     </p>
     <p>
       Je suis doctorant en mathématiques à l'Université de Bordeaux, sous la direction de
-      <a href="https://www.math.u-bordeaux.fr/fr/fiche-personnelle-kkellay" target="_blank">Karim Kellay</a> et <a href="https://www.math.u-bordeaux.fr/fr/fiche-personnelle-pjaming" target="_blank">Philippe Jaming</a>. Ma thèse porte sur les <em>problèmes d'approximation
-      dans l'espace de Dirichlet</em>.
+      <a href="https://www.math.u-bordeaux.fr/fr/fiche-personnelle-kkellay" target="_blank" style="color:var(--accent); text-decoration:none;">Karim Kellay</a> et <a href="https://www.math.u-bordeaux.fr/fr/fiche-personnelle-pjaming" target="_blank" style="color:var(--accent); text-decoration:none;">Philippe Jaming</a>. Ma thèse porte sur les <em>problèmes d'approximation dans l'espace de Dirichlet</em>.
     </p>
     <p>
       Mes intérêts de recherche portent sur l'analyse complexe, l'analyse harmonique et
@@ -496,7 +533,7 @@
       </div>
     </div>
 
-    <a href="https://github.com/jules-g7/memoire/raw/main/CV_site.pdf" class="link-small">↓ Télécharger le CV complet (PDF)</a>
+    <a href="https://github.com/jules-g7/memoire/raw/main/CV_site.pdf" class="link-small" target="_blank">↓ Télécharger le CV complet (PDF)</a>
   </section>
 
   <!-- RECHERCHE -->
@@ -536,8 +573,8 @@
       l'espace de Bergman.</p>
     </div>
 
-    <div style="margin-top:2rem;">
-      <h2>Publications &amp; prépublications</h2>
+    <div style="margin-top:2.5rem;">
+      <div class="block-label">Publications &amp; prépublications</div>
       <span class="placeholder">À compléter à l'avenir.</span>
     </div>
   </section>
@@ -546,44 +583,25 @@
   <section id="enseignement">
     <div class="section-label">Enseignement</div>
     <h2>Cours &amp; travaux dirigés</h2>
-    <p>Enseignements divers.</p>
-    <table style="margin-top:1.5rem; width:100%; border-collapse:collapse;">
-  <thead>
-    <tr>
-      <th style="text-align:left; padding:0.5rem 2rem 0.8rem 0; font-family:'IBM Plex Mono',monospace; font-size:0.65rem; text-transform:uppercase; letter-spacing:0.1em; color:#bbb; border-bottom:1px solid #ddd; font-weight:400;">Intitulé</th>
-      <th style="text-align:left; padding:0.5rem 2rem 0.8rem 0; font-family:'IBM Plex Mono',monospace; font-size:0.65rem; text-transform:uppercase; letter-spacing:0.1em; color:#bbb; border-bottom:1px solid #ddd; font-weight:400;">Niveau</th>
-      <th style="text-align:left; padding:0.5rem 2rem 0.8rem 0; font-family:'IBM Plex Mono',monospace; font-size:0.65rem; text-transform:uppercase; letter-spacing:0.1em; color:#bbb; border-bottom:1px solid #ddd; font-weight:400;">Année</th>
-      <th style="text-align:left; padding:0.5rem 0 0.8rem 0; font-family:'IBM Plex Mono',monospace; font-size:0.65rem; text-transform:uppercase; letter-spacing:0.1em; color:#bbb; border-bottom:1px solid #ddd; font-weight:400;">Documents</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="padding:1.1rem 2rem 1.1rem 0; border-bottom:1px solid #f0f0ee; font-size:0.88rem;">TBA</td>
-      <td style="padding:1.1rem 2rem 1.1rem 0; border-bottom:1px solid #f0f0ee; font-family:'IBM Plex Mono',monospace; font-size:0.72rem; color:#777;">--</td>
-      <td style="padding:1.1rem 2rem 1.1rem 0; border-bottom:1px solid #f0f0ee; font-family:'IBM Plex Mono',monospace; font-size:0.72rem; color:#777;">--</td>
-      <td style="padding:1.1rem 0 1.1rem 0; border-bottom:1px solid #f0f0ee;"><a href="#" style="color:#1a4a8a; text-decoration:none; font-size:0.78rem;">vide</a></td>
-    </tr>
-  </tbody>
-</table>
-    <p style="margin-top: 3rem;">Enseignements assurés à l'Université de Bordeaux.</p>
-    <table style="margin-top:1.5rem; width:100%; border-collapse:collapse;">
-  <thead>
-    <tr>
-      <th style="text-align:left; padding:0.5rem 2rem 0.8rem 0; font-family:'IBM Plex Mono',monospace; font-size:0.65rem; text-transform:uppercase; letter-spacing:0.1em; color:#bbb; border-bottom:1px solid #ddd; font-weight:400;">Intitulé</th>
-      <th style="text-align:left; padding:0.5rem 2rem 0.8rem 0; font-family:'IBM Plex Mono',monospace; font-size:0.65rem; text-transform:uppercase; letter-spacing:0.1em; color:#bbb; border-bottom:1px solid #ddd; font-weight:400;">Niveau</th>
-      <th style="text-align:left; padding:0.5rem 2rem 0.8rem 0; font-family:'IBM Plex Mono',monospace; font-size:0.65rem; text-transform:uppercase; letter-spacing:0.1em; color:#bbb; border-bottom:1px solid #ddd; font-weight:400;">Année</th>
-      <th style="text-align:left; padding:0.5rem 0 0.8rem 0; font-family:'IBM Plex Mono',monospace; font-size:0.65rem; text-transform:uppercase; letter-spacing:0.1em; color:#bbb; border-bottom:1px solid #ddd; font-weight:400;">Documents</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="padding:1.1rem 2rem 1.1rem 0; border-bottom:1px solid #f0f0ee; font-size:0.88rem;">TBA</td>
-      <td style="padding:1.1rem 2rem 1.1rem 0; border-bottom:1px solid #f0f0ee; font-family:'IBM Plex Mono',monospace; font-size:0.72rem; color:#777;">--</td>
-      <td style="padding:1.1rem 2rem 1.1rem 0; border-bottom:1px solid #f0f0ee; font-family:'IBM Plex Mono',monospace; font-size:0.72rem; color:#777;">--</td>
-      <td style="padding:1.1rem 0 1.1rem 0; border-bottom:1px solid #f0f0ee;"><a href="#" style="color:#1a4a8a; text-decoration:none; font-size:0.78rem;">vide</a></td>
-    </tr>
-  </tbody>
-</table>
+    <p>Enseignements assurés à l'Université de Bordeaux.</p>
+    <table class="teach-table">
+      <thead>
+        <tr>
+          <th>Intitulé</th>
+          <th>Niveau</th>
+          <th>Année</th>
+          <th>Documents</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>TBA</td>
+          <td class="mono">—</td>
+          <td class="mono">—</td>
+          <td>—</td>
+        </tr>
+      </tbody>
+    </table>
   </section>
 
   <!-- EXPOSÉS -->
@@ -616,7 +634,7 @@
         <div class="contact-item">
           <div class="contact-label">Adresse email</div>
           <div class="contact-value">
-            jules.gagnaire@math.u-bordeaux.fr
+            <a href="mailto:jules.gagnaire@math.u-bordeaux.fr">jules.gagnaire@math.u-bordeaux.fr</a>
           </div>
         </div>
         <div class="contact-item">
@@ -652,10 +670,22 @@
   Jules Gagnaire — Doctorant en mathématiques, Université de Bordeaux
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
   const sections = document.querySelectorAll('section[id]');
   const links = document.querySelectorAll('nav a');
+
   const obs = new IntersectionObserver(entries => {
     entries.forEach(e => {
       if (e.isIntersecting) {
-        links.forEach(l => l.cl
+        links.forEach(l => l.classList.remove('active'));
+        const a = document.querySelector(`nav a[href="#${e.target.id}"]`);
+        if (a) a.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-30% 0px -65% 0px' });
+
+  sections.forEach(s => obs.observe(s));
+</script>
+
+</body>
+</html>
